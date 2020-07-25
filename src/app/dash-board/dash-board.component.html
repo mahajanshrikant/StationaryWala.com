@@ -1,0 +1,114 @@
+<mat-toolbar fxLayout="row" color="primary">
+    <span fxFlex> StationaryWala.com</span>
+    <!-- <button mat-button routerLink="/deals"><mat-icon>new_releases</mat-icon> Deals</button> -->
+    <button mat-button routerLink="/cart"><mat-icon>add_shopping_cart</mat-icon> My Orders</button>
+    <button mat-button routerLink="/favourite"><mat-icon>local_dining</mat-icon> My Bag</button>
+    <button mat-button routerLink="/sign"><mat-icon>account_box</mat-icon> LogIn/Sign In</button>
+    <ng-container>
+        <button mat-icon-button >
+            
+        </button>
+        <mat-menu >
+            <ng-container >
+              
+            </ng-container>
+        </mat-menu>
+    </ng-container>
+</mat-toolbar>
+
+<mat-divider> </mat-divider>
+<mat-divider> </mat-divider>
+
+<mat-divider> </mat-divider>
+<mat-divider> </mat-divider>
+<mat-divider> </mat-divider>
+<mat-divider> </mat-divider>
+  <mat-carousel
+  timings="250ms ease-in"
+  [autoplay]="true"
+  interval="5000"
+  color="accent"
+  maxWidth="auto"
+  proportion="25"
+  slides="5"
+  [loop]="true"
+  [hideArrows]="false"
+  [hideIndicators]="false"
+  [useKeyboard]="true"
+  [useMouseWheel]="false"
+  orientation="ltr"
+>
+  <mat-carousel-slide
+    #matCarouselSlide
+    *ngFor="let slide of slides; let i = index"
+    [image]="slide.image"
+    overlayColor="#00000040"
+    [hideOverlay]="false"
+  ></mat-carousel-slide>
+</mat-carousel>
+
+<mat-divider>
+
+</mat-divider>
+
+<mat-divider>
+    
+</mat-divider>
+
+ <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of pictures">
+      <mat-card  class="mat-elevation-z4" >
+        <mat-card-header>
+          <mat-card-title>{{num.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="num.img">
+        <mat-card-content>
+          <!--<p>
+            The Himalayas is a mountain range in Asia.
+          </p> -->
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>ADD TO Cart</button>
+           <button mat-button>SHARE</button>  -->
+          <button mat-icon-button color="warn">
+            <mat-icon>favorite</mat-icon>
+          </button>
+         </mat-card-actions>
+      </mat-card>
+    </div>
+  </div> 
+
+  <mat-accordion >
+    <mat-expansion-panel style="background-color: rgb(14,13,13); height:435px;margin-block-start:20px;" disabled>
+      <mat-expansion-panel-header >
+        <mat-panel-title style="color: cornsilk; margin-left:45px; margin-block-start:400px">
+          <mat-list>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px" >StationaryWala.com</mat-list-item>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px;" >About US</mat-list-item>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px;" > Help Support</mat-list-item>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px;" > Contact US</mat-list-item>
+         
+          </mat-list>
+
+        </mat-panel-title>
+
+    
+        <mat-panel-title style="color: cornsilk; margin-left: 56px; margin-block-start:400px">
+          <mat-list>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px;" >FOLLOW US</mat-list-item>
+            <mat-divider> </mat-divider>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px" ><i class="fa fa-facebook-square" style="font-size:48px; color:red"></i></mat-list-item>
+          <mat-divider> </mat-divider>
+          <mat-divider> </mat-divider>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px" ><i class="fa fa-linkedin-square" style="font-size:48px; color:red"></i></mat-list-item>
+            <mat-divider>  </mat-divider>
+            <mat-list-item style="color: cornsilk ;margin-inline:40px" ><i class="fa fa-instagram" style="font-size:48px; color:red"></i></mat-list-item>
+          
+          </mat-list>
+
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
